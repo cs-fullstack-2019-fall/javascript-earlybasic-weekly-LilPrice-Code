@@ -10,26 +10,41 @@ while(0===0){
         var Opt2 = prompt("Press 1 to count by 1. Press 2 to count by 2. Press q to go back.");
             //Giving user the option to go back to menu or continue with count.
         if (Opt2 === "1"){
-            //Option 1
-            var num1 = parseInt(prompt("Enter the number you want to count to."));
-            var x = 1;
-            //Counting to user input.
-            while (x <= num1){
-                console.log(x);
-                x++;
+            while (Opt2 === "1"){
+                //Option 1
+                var num1 = parseInt(prompt("Enter the number you want to count to."));
+                var x = parseInt(prompt("Enter a starting number"));
+                //Counting to user input.
+                if (x >= num1){
+                alert("ERROR. TRY AGAIN")
                 }
-
+                else{
+                    while (x <= num1){
+                        console.log(x);
+                        x++;
+                        Opt2 = 0;
+                    }
+                }
             }
+        }
         else if (Opt2 === "2"){
-            //Option 2
-            var num4 = parseInt(prompt("Enter the number you want to count to."));
-            var y = 1;
-            //Counting to user input.
-            while (y <= num4){
-                console.log(y);
-                y = y + 2;
+            while (Opt2 === "2"){
+                //Option 2
+                var num4 = parseInt(prompt("Enter the number you want to count to."));
+                var y = parseInt(prompt("Enter a starting number."));
+                //Counting to user input.
+                if (y >= num4){
+                alert("ERROR")
+                }
+                else{
+                    while (y <= num4){
+                        console.log(y);
+                        y = y + 2;
+                        Opt2 = 0;
+                    }
                 }
             }
+        }
         else if (Opt2 === "Q" || Opt2 === "q"){
             //Sending user back to menu.
             alert("Heading Back!");
